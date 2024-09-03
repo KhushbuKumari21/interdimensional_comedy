@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /comedy-shows:
+    get:
+      operationId: comedy_shows_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: string
+                type: array
+          description: A list of comedy shows
+      summary: List comedy shows
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+components:
+  schemas: {}

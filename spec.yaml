@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+paths:
+  /comedy-shows:
+    get:
+      summary: List comedy shows
+      responses:
+        '200':
+          description: A list of comedy shows
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
